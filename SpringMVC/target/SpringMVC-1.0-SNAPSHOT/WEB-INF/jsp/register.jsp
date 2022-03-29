@@ -25,7 +25,7 @@
     <div class="row py-5 mt-4 align-items-center">
         <!-- For Demo Purpose -->
         <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
-            <img src="<c:url value="/img/registerpic.svg"/>" alt="" class="img-fluid mb-3 d-none d-md-block">
+            <img src="https://atpsoftware.vn/wp-content/uploads/2020/02/Nh%E1%BA%ADn-bi%E1%BA%BFt-Register-l%C3%A0-g%C3%AC.jpg" alt="" class="img-fluid mb-3 d-none d-md-block">
         </div>
         <div class="col-md-7 col-lg-6 ml-auto">
             <div class="row">

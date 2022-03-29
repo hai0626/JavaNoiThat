@@ -6,26 +6,12 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<div id="heading-breadcrumbs">
-    <div class="container">
-        <div class="row d-flex align-items-center flex-wrap">
-            <div class="col-md-7">
-                <h1 class="h2">Đăng nhập</h1>
-            </div>
-            <div class="col-md-5">
-                <ul class="breadcrumb d-flex justify-content-end">
-                    <li class="breadcrumb-item"><a href="<c:url value="/"/>">Trang chủ</a></li>
-                    <li class="breadcrumb-item active">Đăng nhập</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
+
 <div class="container">
     <div class="row py-5 mt-4 align-items-center">
         <!-- For Demo Purpose -->
         <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
-            <img src="<c:url value="/img/loginpic.svg"/>" alt="" class="img-fluid mb-3 d-none d-md-block">
+            <img src="https://usersplit.com/landrick/images/user/login.svg" alt="" class="img-fluid mb-3 d-none d-md-block">
         </div>
         <div class="col-md-7 col-lg-6 ml-auto">
             <div class="row">

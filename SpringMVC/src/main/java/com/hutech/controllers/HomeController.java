@@ -44,4 +44,9 @@ public class HomeController {
     public String blog() { 
         return "blog";
     }
+    
+    @RequestMapping("/cart")
+    public String cart() {
+        return "cart";
+    }
 }

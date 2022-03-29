@@ -26,7 +26,7 @@ public class ProductController {
     @RequestMapping(value = {"/product"})
     public String product(Model model) throws SQLException {
         model.addAttribute("listProduct", productDAO.getList());
-        model.addAttribute("listBrand", brandDAO.getList());
+//        model.addAttribute("listBrand", brandDAO.getList());
         return "product";
     }
 
