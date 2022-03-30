@@ -25,15 +25,15 @@
                         </c:forEach>--%>
 		
 <!-- section cart -->
-    <section id="cart" class="cart">
+<!--    <section id="cart" class="cart">
         <div class="container">
             <h3>giỏ hàng của bạn</h3>
-            <!-- <div class="cart-empty">
+             <div class="cart-empty">
               <h5>
                 Không có sản phẩm nào trong giỏ hàng. Quay lại cửa hàng để tiếp
                 tục mua sắm
               </h5>
-            </div> -->
+            </div> 
             <div class="shopping-cart">
                 <div class="column-labels">
                   <label class="product-image">Hình Ảnh</label>
@@ -84,4 +84,53 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
+
+<div class="container">
+  <div class="table-responsive">
+    <table style="text-align: center;" class="basic-table table-headers table table-hover">
+        <thead >
+          <tr style="background:#34a3d4; color: #fff; ">
+          <th>Hình Ảnh</th>
+          <th>Tên</th>
+          <th>Giá</th>
+          <th style="width:20%">Số lượng</th>  
+          <th>Xóa</th>
+          <th>Thành tiền</th>
+        </tr>
+        <tr style="height: 1rem; border: none; box-shadow: none;"></tr>
+      </thead>
+      <tbody >
+          <c:forEach var="item" items="${sessionScope.cart }">
+			<c:set var="total"
+				value="${total + item.product.price * item.quantity }"></c:set>
+        <tr>
+           <td><img src="<c:url value="${item.product.linkImg}"/>"
+					width="50" alt="img" /></td>
+          <td>${item.product.nameProduct}</td>
+          <td>${item.product.price}</td>
+          <td>
+              <input style="width: 20%; text-align: center;" type="number" id="quantity" name="quantity" value="${item.quantity}" min="1">
+          </td>
+          <td><button style="padding: 0.6rem 1rem; background-color: #34a3d4; border-radius: 5px; color: #fff">Xóa</button></td>
+          <td>${item.product.price * item.quantity }đ</td>
+        </tr>
+         </c:forEach>
+               
+         
+        
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+<style>
+ .table-responsive {
+  padding: 3rem;
+  background-color: #f1f1f1;
+  margin: 5rem 0;
+  font-size: 1.4rem;
+  
+}
+
+</style>
