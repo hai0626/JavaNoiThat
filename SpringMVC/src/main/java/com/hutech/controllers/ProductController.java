@@ -31,7 +31,7 @@ public class ProductController {
     }
 
     @RequestMapping(value = {"/detail/{idproduct}"})
-    public String detail(Model model, @PathVariable("idproduct") int idproduct) throws SQLException {
+    public String detail(Model model, @PathVariable("idproduct") String idproduct) throws SQLException {
         Product product = new ProductDAO().getByID(idproduct);
         System.out.println(product.getNameProduct());
         model.addAttribute("productDetail", product);

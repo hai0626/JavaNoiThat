@@ -6,6 +6,24 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<link rel="stylesheet" href="resource/css/style.css"/>
+
+<%--<c:set var="total" value="0"></c:set>
+		<c:forEach var="item" items="${sessionScope.cart }">
+			<tr>
+				<td align="center"><a
+					href="${pageContext.request.contextPath }/cart/remove/${item.product.idProduct }"
+					onclick="return confirm('Are you sure?')">Remove</a></td>
+				<td>${item.product.idProduct }</td>
+				<td>${item.product.nameProduct }</td>
+				<td><img src="<c:url value="${item.product.linkImg}"/>"
+					width="50"></td>
+				<td>${item.product.price }</td>
+				<td>${item.quantity }</td>
+				<td>${item.product.price * item.quantity }</td>
+			</tr>
+                        </c:forEach>--%>
+		
 <!-- section cart -->
     <section id="cart" class="cart">
         <div class="container">
@@ -24,17 +42,21 @@
                   <label class="product-quantity">Số Lượng</label>
                   <label class="product-removal">Xóa</label>
                   <label class="product-line-price">Thành Tiền</label>
-                </div>             
+                </div>   
+                <c:forEach var="item" items="${sessionScope.cart }">
+			<c:set var="total"
+				value="${total + item.product.price * item.quantity }"></c:set>
                 <div class="product">
                     <div class="product-image">
-                        <img src="./src/assets/images/product_1.jpg" alt="img" />
+                        <img src="<c:url value="${item.product.linkImg}"/>"
+					width="50" alt="img" />
                     </div>
                     <div class="product-details">
                         <div class="product-title">
-                          <a href="#"> Bàn </a>
+                          <a href="#">${item.product.nameProduct}</a>
                         </div>
                     </div>
-                    <div class="product-price">1,000,000₫</div>
+                    <div class="product-price">${item.product.price }₫</div>
                     <div class="product-quantity">
                         <select id="quatity">
                             <option value="1" selected>1</option>
@@ -47,8 +69,9 @@
                     <div class="product-removal">
                         <button >Xóa</button>
                     </div>
-                    <div class="product-line-price">1,000,000₫</div>
+                    <div class="product-line-price">${item.product.price * item.quantity }₫</div>
                 </div>
+                                        </c:forEach>
                 <div class="totals-item">
                   <label>Tổng số thành tiền:</label>
                   <div class="totals-value" id="cart-subtotal">

@@ -6,12 +6,14 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<form method="POST" >
 <!-- section detail product -->
      <section id="detailProduct" class="detailProduct">
           <div class="container">
             <div class="detailProduct-main">
                   <div class="detailProduct-main-image">
-                   <img src="./src/assets/images/product_1.jpg" alt=""></img> 
+                   <img src="<c:url value="${productDetail.linkImg}"/>" alt=""></img> 
                   </div>
                   <div class="detailProduct-main-box">
                     <h2 class="name">${productDetail.nameProduct}</h2>
@@ -19,8 +21,11 @@
                      ${productDetail.price} ₫
                     </h3>
                     <h5 class="status">
-                        <span>${productDetail.status}</span>                        
+                        <span>${productDetail.description}</span>                        
                     </h5>
+                    <h5 class="status">
+                        <span>${productDetail.status}</span>                        
+                    </h5>                     
                         <p class="quantity">
                           số lượng
                           <select id="quatity">
@@ -31,7 +36,7 @@
                             <option value="5">5</option>
                           </select>
                         </p>
-                        <a href="@Url.Action("addCart", "Cart", new { @iMaProduct = @Model.IdProduct, @strURL=Request.Url.ToString() })"
+                        <a href="${pageContext.request.contextPath }/cart/buy/${productDetail.idProduct}"
                            class="btn">
                             THÊM VÀO GIỎ HÀNG
                         </a>
@@ -39,3 +44,4 @@
             </div>
           </div>
      </section>
+</form>

@@ -24,7 +24,10 @@
         <script src="<c:url value="/vendor/jquery/jquery.min.js"/>"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
         <script type="text/html" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
-        <link rel="shortcut icon" href="<c:url value="/img/tomos.png"/>">
+        <link rel="shortcut icon" href="<c:url value="/img/icon-page.png"/>">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <!-- header -->

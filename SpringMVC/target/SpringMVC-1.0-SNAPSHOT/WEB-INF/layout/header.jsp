@@ -71,7 +71,7 @@
                 <div class="cart">
                     <a href="<c:url value="/cart"/>">
                         <i class="fas fa-dolly">
-                            <span class="cart-count">0</span>
+                            <span class="cart-count">${cart.size()}</span>
                         </i>
                     </a>
                 </div>

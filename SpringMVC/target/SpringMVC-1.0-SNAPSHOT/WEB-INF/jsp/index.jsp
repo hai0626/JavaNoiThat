@@ -9,13 +9,16 @@
 <link rel="stylesheet" href="resource/css/style.css"/>
 <!-- section outstanding product -->
 
+
+
 <section id="outstanding_products" class="outstanding_products">
-    <div class="container">
+    <div class="container">        
         <div class="outstanding_products-main">
+            
             <div class="product-large">
                 <div class="image">
                     <a href="./detailproduct.html">
-                        <img src="./src/assets/images/product_1.jpg" class="img" alt="img" />
+                        <img src="<c:url value="${product.linkImg}"/>" class="img" alt="img" />
                         <div class="info">
                             <a href="#" alt="img" class="iconProduct"><i class="fa-solid fa-eye"></i></a>
                             <a href="#" class="iconProduct" ><i class="fas fa-dolly"></i></a>
@@ -25,6 +28,7 @@
                 <div class="name"><a href="#" alt="">bàn</a></div>
                 <div class="price"><h2> 1,000,000 ₫</h2></div>
             </div>
+
             <div class="product-medium flex-column">
                 <div class="heading">
                     <h2 class="skew">nổi bật nhất</h2>
@@ -33,7 +37,7 @@
                     <div class="item">
                         <a href="#">
                             <div class="image">
-                                <img src="./src/assets/images/product_1.jpg" alt="" class="img" />
+                                <img src="<c:url value="${item.linkImg}"/>" alt="" class="img" />
                                 <div class="info">
                                     <a href="#" class="iconProduct">
                                         <i class="fa-solid fa-eye"></i>
@@ -47,10 +51,11 @@
                             <p>1,000,000₫</p>
                         </a>
                     </div> 
+                    <c:forEach  var = "item" items="${listProduct}">
                     <div class="item">
                         <a href="#">
                             <div class="image">
-                                <img src="./src/assets/images/product_2.jpg" alt="" class="img" />
+                                <img src="<c:url value="${item.linkImg}"/>" alt="" class="img" />
                                 <div class="info">
                                     <a href="#" class="iconProduct">
                                         <i class="fa-solid fa-eye"></i>
@@ -60,11 +65,12 @@
                                     </a>
                                 </div>
                             </div>
-                            <a href="#" alt="">Bàn</a>
-                            <p>1,000,000₫</p>
+                            <a href="#" alt="">${item.nameProduct}</a>
+                            <p>${item.price}₫</p>
                         </a>
                     </div> 
-                    <div class="item">
+                    </c:forEach>
+<!--                    <div class="item">
                         <a href="#">
                             <div class="image">
                                 <img src="./src/assets/images/product_3.jpg" alt="" class="img" />
@@ -165,7 +171,7 @@
                             <a href="#" alt="">Bàn</a>
                             <p>1,000,000₫</p>
                         </a>
-                    </div> 
+                    </div> -->
                 </div>
                 <!--            <nav>
                               <ul class="pagination">

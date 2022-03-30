@@ -23,7 +23,28 @@ public class ProductDAO {
 
     public List<Product> getList() throws SQLException {
         List<Product> list = new ArrayList<>();
-        String sql = "SELECT * FROM `product`";
+        String sql = "SELECT * FROM `product` ";
+        ResultSet rs = con.LoadData(sql);
+        while (rs.next()) {
+            Product p = new Product();
+            p.setIdProduct(rs.getInt(1));
+            p.setNameProduct(rs.getString(2));
+            p.setPrice(rs.getInt(3));
+            p.setDescription(rs.getString(4));
+            p.setStatus(rs.getString(5));
+            p.setLinkImg(rs.getString(6));
+            p.setIdBrand(new BrandDAO().getByID(rs.getString(7)));
+            p.setOrderDetailCollection(new ArrayList<OrderDetail>());
+//            p.setImgProductCollection(new ArrayList<ImgProduct>());
+            
+            list.add(p);
+        }
+        return list;
+    }
+    
+     public List<Product> getListIndex() throws SQLException {
+        List<Product> list = new ArrayList<>();
+        String sql = "SELECT * FROM `product` LIMIT 6 ";
         ResultSet rs = con.LoadData(sql);
         while (rs.next()) {
             Product p = new Product();
@@ -42,8 +63,26 @@ public class ProductDAO {
         return list;
     }
 
-    public Product getByID(int id) throws SQLException {
+    public Product getByID(String id) throws SQLException {
         String sql = "SELECT * FROM `product` WHERE IdProduct = " + id + "";
+        ResultSet rs = con.LoadData(sql);
+        Product p = new Product();
+        if (rs.next()) {
+            p.setIdProduct(rs.getInt(1));
+            p.setNameProduct(rs.getString(2));
+            p.setPrice(rs.getInt(3));
+            p.setDescription(rs.getString(4));
+            p.setStatus(rs.getString(5));
+            p.setLinkImg(rs.getString(6));
+            p.setIdBrand(new BrandDAO().getByID(rs.getString(7)));
+            p.setOrderDetailCollection(new ArrayList<OrderDetail>());
+//            p.setImgProductCollection(new ArrayList<ImgProduct>());
+        }
+        return p;
+    }
+    
+    public Product getProduct() throws SQLException {
+        String sql = "SELECT * FROM `product` ";
         ResultSet rs = con.LoadData(sql);
         Product p = new Product();
         if (rs.next()) {

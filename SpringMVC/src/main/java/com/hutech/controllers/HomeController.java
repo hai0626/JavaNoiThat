@@ -5,7 +5,10 @@
 package com.hutech.controllers;
 
 
+import com.hutech.dao.ProductDAO;
+import java.sql.SQLException;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -14,12 +17,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class HomeController {
-
+    ProductDAO productDAO = new ProductDAO();
+    
+    
     @RequestMapping("/")
-    public String index() { 
+    public String index(Model model) throws SQLException {
+        model.addAttribute("listProduct", productDAO.getListIndex());
+        model.addAttribute("product", productDAO.getProduct());
+
         return "index";
     }
-    
     @RequestMapping("/about")
     public String about() {
         return "about";
