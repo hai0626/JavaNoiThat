@@ -96,7 +96,7 @@
                     </a>
                 </li>
                 <li class="navbar-item">
-                    <a href="<c:url value="product"/>" class="links">
+                    <a href="<c:url value="/product"/>" class="links">
                         sản phẩm
                     </a>
                 </li>

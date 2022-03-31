@@ -13,7 +13,7 @@
           <div class="container">
             <div class="detailProduct-main">
                   <div class="detailProduct-main-image">
-                   <img src="<c:url value="${productDetail.linkImg}"/>" alt=""></img> 
+                      <img src="<c:url value="${productDetail.linkImg}"/>" alt=""></img> 
                   </div>
                   <div class="detailProduct-main-box">
                     <h2 class="name">${productDetail.nameProduct}</h2>
@@ -21,10 +21,10 @@
                      ${productDetail.price} ₫
                     </h3>
                     <h5 class="status">
-                        <span>${productDetail.description}</span>                        
+                        <span>Chi tiết sản phẩm: ${productDetail.description}</span>                        
                     </h5>
                     <h5 class="status">
-                        <span>${productDetail.status}</span>                        
+                        <span>Tình trạng: ${productDetail.status}</span>                        
                     </h5>                     
                         <p class="quantity">
                           số lượng

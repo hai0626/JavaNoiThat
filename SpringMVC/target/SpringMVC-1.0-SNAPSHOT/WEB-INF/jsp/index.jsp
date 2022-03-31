@@ -1,7 +1,7 @@
 <%-- 
     Document   : index.jsp
     Created on : 8 Mar 2022, 1:46:54 pm
-    Author     : Hiệp Phan
+    Author     : Thanh Long
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -34,23 +34,7 @@
                     <h2 class="skew">nổi bật nhất</h2>
                 </div>
                 <div class="content">
-                    <div class="item">
-                        <a href="#">
-                            <div class="image">
-                                <img src="<c:url value="${item.linkImg}"/>" alt="" class="img" />
-                                <div class="info">
-                                    <a href="#" class="iconProduct">
-                                        <i class="fa-solid fa-eye"></i>
-                                    </a>
-                                    <a href="#" class="iconProduct" >
-                                        <i class="fas fa-dolly"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="#" alt="">Bàn</a>
-                            <p>1,000,000₫</p>
-                        </a>
-                    </div> 
+                   
                     <c:forEach  var = "item" items="${listProduct}">
                     <div class="item">
                         <a href="#">
@@ -70,108 +54,6 @@
                         </a>
                     </div> 
                     </c:forEach>
-<!--                    <div class="item">
-                        <a href="#">
-                            <div class="image">
-                                <img src="./src/assets/images/product_3.jpg" alt="" class="img" />
-                                <div class="info">
-                                    <a href="#" class="iconProduct">
-                                        <i class="fa-solid fa-eye"></i>
-                                    </a>
-                                    <a href="#" class="iconProduct" >
-                                        <i class="fas fa-dolly"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="#" alt="">Bàn</a>
-                            <p>1,000,000₫</p>
-                        </a>
-                    </div> 
-                    <div class="item">
-                        <a href="#">
-                            <div class="image">
-                                <img src="./src/assets/images/product_4.jpg" alt="" class="img" />
-                                <div class="info">
-                                    <a href="#" class="iconProduct">
-                                        <i class="fa-solid fa-eye"></i>
-                                    </a>
-                                    <a href="#" class="iconProduct" >
-                                        <i class="fas fa-dolly"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="#" alt="">Bàn</a>
-                            <p>1,000,000₫</p>
-                        </a>
-                    </div> 
-                    <div class="item">
-                        <a href="#">
-                            <div class="image">
-                                <img src="./src/assets/images/product_5.jpg" alt="" class="img" />
-                                <div class="info">
-                                    <a href="#" class="iconProduct">
-                                        <i class="fa-solid fa-eye"></i>
-                                    </a>
-                                    <a href="#" class="iconProduct" >
-                                        <i class="fas fa-dolly"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="#" alt="">Bàn</a>
-                            <p>1,000,000₫</p>
-                        </a>
-                    </div> 
-                    <div class="item">
-                        <a href="#">
-                            <div class="image">
-                                <img src="./src/assets/images/product_6.jpg" alt="" class="img" />
-                                <div class="info">
-                                    <a href="#" class="iconProduct">
-                                        <i class="fa-solid fa-eye"></i>
-                                    </a>
-                                    <a href="#" class="iconProduct" >
-                                        <i class="fas fa-dolly"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="#" alt="">Bàn</a>
-                            <p>1,000,000₫</p>
-                        </a>
-                    </div> 
-                    <div class="item">
-                        <a href="#">
-                            <div class="image">
-                                <img src="./src/assets/images/product_7.jpg" alt="" class="img" />
-                                <div class="info">
-                                    <a href="#" class="iconProduct">
-                                        <i class="fa-solid fa-eye"></i>
-                                    </a>
-                                    <a href="#" class="iconProduct" >
-                                        <i class="fas fa-dolly"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="#" alt="">Bàn</a>
-                            <p>1,000,000₫</p>
-                        </a>
-                    </div> 
-                    <div class="item">
-                        <a href="#">
-                            <div class="image">
-                                <img src="./src/assets/images/product_8.jpg" alt="" class="img" />
-                                <div class="info">
-                                    <a href="#" class="iconProduct">
-                                        <i class="fa-solid fa-eye"></i>
-                                    </a>
-                                    <a href="#" class="iconProduct" >
-                                        <i class="fas fa-dolly"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="#" alt="">Bàn</a>
-                            <p>1,000,000₫</p>
-                        </a>
-                    </div> -->
                 </div>
                 <!--            <nav>
                               <ul class="pagination">
