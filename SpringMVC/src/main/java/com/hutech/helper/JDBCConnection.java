@@ -18,7 +18,7 @@ public class JDBCConnection {
 
     public Connection getConnection() {
         try {
-            String DB_URL = "jdbc:mysql://localhost:3306/dblaptop";
+            String DB_URL = "jdbc:mysql://localhost:3306/dbnoithat";
             String USER_NAME = "root";
             String PASSWORD = "";
             Class.forName("com.mysql.jdbc.Driver");

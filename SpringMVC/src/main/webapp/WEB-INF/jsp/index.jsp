@@ -75,10 +75,10 @@
     <div class="container">
         <div class="banner-main">
             <div class="banner-main-kitchen">
-                <img src="./src/assets/images/banner_1.jpg" />
+                <img src="./resource/img/banner_1.jpg" />
             </div>
             <div class="banner-main-livingroom">
-                <img src="./src/assets/images/banner_2.jpg" />
+                <img src="./resource/img/banner_2.jpg" />
             </div>
         </div>
     </div>
@@ -261,7 +261,7 @@
 <!-- section advertise-->
 <section id="advertise" class="advertise">
     <div class="container">
-        <img src="./src/assets/images/banner.jpg" />
+        <img src="./resource/img/banner.jpg" />
     </div>
 </section>
 
