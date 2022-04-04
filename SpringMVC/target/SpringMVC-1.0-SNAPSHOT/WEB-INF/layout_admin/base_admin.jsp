@@ -9,7 +9,6 @@
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="decorator"%>
 <!DOCTYPE html>
 <html>
-
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,17 +59,12 @@
                 <div class="main-menu">
                     <h5 class="sidenav-heading">DANH MỤC</h5>
                     <ul id="side-main-menu" class="side-menu list-unstyled">
-
-                        <li><a href="<c:url value="/admin/product"/>"><i class="fa-solid fa-motorcycle"></i>Sản phẩm</a></li>
+                        <li><a href="<c:url value="/admin/product"/>"><i class="fa-solid fa-chair"></i>Sản phẩm</a></li>
+                        <li><a href="<c:url value="/admin/typecar"/>")"><i class="fa-solid fa-chair"></i>Loại sản phẩm</a></li>
+                        <li><a href="<c:url value="/admin/create-product"/>")"><i class="fa-solid fa-user-check"></i>Thêm sản phẩm</a></li>
                         <li><a href="<c:url value="/admin/order"/>"><i class="fa-solid fa-clipboard-check"></i>Đơn hàng</a></li> 
-                        <li><a href="<c:url value="/admin/customer"/>")"><i class="fa-solid fa-user-check"></i>Người dùng</a></li>
                         <li><a href="<c:url value="/admin/userrole"/>")"><i class="fa-solid fa-user-check"></i>Vai trò</a></li>
-                        <li><a href="<c:url value="/admin/contact"/>"><i class="fa-solid fa-envelopes-bulk"></i>Liên hệ</a></li>
-                        <li><a href="<c:url value="/admin/blog"/>"><i class="fa-solid fa-signs-post"></i>Bài viết</a></li>
-                        <li><a href="<c:url value="/admin/typecar"/>")"><i class="fa-solid fa-motorcycle"></i>Loại xe</a></li>
-                        <li><a href="<c:url value="/admin/brand"/>"><i class="fa-solid fa-copyright"></i>Hãng xe</a></li>
-                        <li><a href="<c:url value="/admin/discount"/>"><i class="fa-solid fa-percent"></i>Khuyến mãi</a></li>
-                        <li><a href="<c:url value="/admin/categoryblog"/>"><i class="fa-brands fa-blogger"></i>Thể loại bài viết</a></li>                
+                        <li><a href="<c:url value="/admin/create-blog"/>"><i class="fa-solid fa-signs-post"></i>Thêm bài viết</a></li>   
                     </ul>
                 </div>
                 <div class="admin-menu">

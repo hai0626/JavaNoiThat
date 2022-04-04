@@ -43,12 +43,12 @@
                         </div>
                         ${message}
                         <div class="container-login100-form-btn">
-                            <button type="submit" class="login100-form-btn" style="background-color: #AE0201; font-weight: bold">
+                            <button type="submit" class="login100-form-btn" style="background-color: #f7941d; font-weight: bold">
                                 ĐĂNG NHẬP
                             </button>
                         </div>           
                     </form>
-                    <div class="login100-more" style="background-image: url('<c:url value="/resource/img/bgxe.jpg"/>');">
+                    <div class="login100-more" style="background-image: url('<c:url value="/resource/img/bg.jpg"/>');">
                     </div>
                 </div>
             </div>
