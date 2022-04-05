@@ -19,7 +19,7 @@ html::-webkit-scrollbar-thumb {
 
 .container {
   width: 100%;
-  max-width: 108em;
+  max-width: 108rem;
   margin: 0 auto;
 }
 
@@ -566,6 +566,10 @@ h6 {
 }
 .outstanding_products-main .product-medium {
   width: 65%;
+}
+.outstanding_products-main .product-medium .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
 }
 
 nav {
