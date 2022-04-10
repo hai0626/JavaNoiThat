@@ -61,7 +61,7 @@
                     <ul id="side-main-menu" class="side-menu list-unstyled">
                         <li><a href="<c:url value="/admin/product"/>"><i class="fa-solid fa-chair"></i>Sản phẩm</a></li>
                         <li><a href="<c:url value="/admin/typecar"/>")"><i class="fa-solid fa-chair"></i>Loại sản phẩm</a></li>
-                        <li><a href="<c:url value="/admin/create-product"/>")"><i class="fa-solid fa-user-check"></i>Thêm sản phẩm</a></li>
+                        <li><a href="<c:url value="/admin/addProduct"/>")"><i class="fa-solid fa-user-check"></i>Thêm sản phẩm</a></li>
                         <li><a href="<c:url value="/admin/order"/>"><i class="fa-solid fa-clipboard-check"></i>Đơn hàng</a></li> 
                         <li><a href="<c:url value="/admin/userrole"/>")"><i class="fa-solid fa-user-check"></i>Vai trò</a></li>
                         <li><a href="<c:url value="/admin/create-blog"/>"><i class="fa-solid fa-signs-post"></i>Thêm bài viết</a></li>   
