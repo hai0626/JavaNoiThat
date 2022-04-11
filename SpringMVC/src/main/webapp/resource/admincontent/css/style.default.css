@@ -384,7 +384,7 @@ nav.navbar a.menu-btn:hover {
   height: 100%;
   width: 200px;
   text-align: left;
-  background-color: #f7941d;
+  background-color: #393836;
   color: #fff;
   z-index: 999;
   overflow-y: auto;
@@ -1541,7 +1541,7 @@ button {
 */
 .table {
   margin-bottom: 0;
-  color: #666;
+  color: #fff;
 }
 
 .table td,

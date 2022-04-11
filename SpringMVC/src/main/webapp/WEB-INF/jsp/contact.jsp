@@ -1,112 +1,54 @@
 <%-- 
     Document   : contact
     Created on : Mar 10, 2022, 8:42:38 PM
-    Author     : huynh
+    Author     : Duc Long
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<div id="heading-breadcrumbs" class="brder-top-0 border-bottom-0">
-    <div class="container">
-        <div class="row d-flex align-items-center flex-wrap">
-            <div class="col-md-7">
-                <h1 class="h2">Liên hệ với chúng tôi</h1>
-            </div>
-            <div class="col-md-5">
-                <ul class="breadcrumb d-flex justify-content-end">
-                    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                    <li class="breadcrumb-item active">Liên hệ</li>
-                </ul>
-            </div>
-        </div>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-main">
+      <div class="contact-main-feedback">
+        <h2 class="text">
+          <i class="fa-solid fa-location-dot"></i>
+          10/80C Xa lộ Hà Nội, Phường Tân Phú, Thủ Đức,
+          Thành phố Hồ Chí Minh, Việt Nam
+        </h2>
+        <h2 class="text">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          Hotline: 0345638420
+        </h2>
+        <h2 class="text">
+          <i class="fa-solid fa-envelope"></i>
+          longnguyen2431@gmail.com
+        </h2>
+        <h3>liên hệ</h3>
+        <input type="text" value="" placeholder="Name" />
+        <input type="text" value="" placeholder="Email" />
+        <textarea
+          rows="5"
+          cols="50"
+          placeholder="Nội dung..."
+        ></textarea>
+        <button class="btn btn-contact">gửi liên hệ</button>
+      </div>
+      <div class="contact-main-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.4206639905988!2d106.78291401518062!3d10.855574792267852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175276e7ea103df%3A0xb6cf10bb7d719327!2zxJDhuqFpIGjhu41jIEh1dGVjaCBLaHUgQ8O0bmcgbmdo4buHIGNhbw!5e0!3m2!1svi!2s!4v1648661014605!5m2!1svi!2s"
+          width="100%"
+          height="100%"
+          title="myFrame"
+          frameborder="0"
+          style="border: 0"
+          aria-hidden="false"
+          tabindex="0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </div>
-</div>
-<div id="content">
-    <div id="contact" class="container">
-        <section class="bar">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="heading">
-                        <h2>Chúng tôi ở đây để giúp bạn</h2>
-                    </div>
-                    <p class="lead">Nếu có điều gì thắc mắc hoặc mong muốn hợp tác kinh doanh, hãy liên lạc với chúng tôi.</p>
+  </div>
+</section>
 
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <div class="box-simple">
-                        <div class="icon-outlined"><i class="fa fa-map-marker"></i></div>
-                        <h3 class="h4">Địa chỉ</h3>
-                        <p> 32 Hai bà Trưng, phường 12,<br>Quận 10,
-                            TP. Hồ Chí Minh<br></p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="box-simple">
-                        <div class="icon-outlined"><i class="fa fa-phone"></i></div>
-                        <h3 class="h4">Gọi ngay</h3>
-                        <!-- <p>This number is toll free if calling from Great Britain otherwise we advise you to use the electronic form of communication.</p> -->
-                        <p><strong>+33 555 444 333</strong></p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="box-simple">
-                        <div class="icon-outlined"><i class="fa fa-envelope"></i></div>
-                        <h3 class="h4">Email</h3>
-                        <!-- <p>Please feel free to write an email to us or to use our electronic ticketing system.</p> -->
-                        <ul class="list-unstyled text-sm">
-                            <li><strong><a href="mailto:">contact@xemaydhcv.com</a></strong></li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class=" bar pt-0">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="heading text-center">
-                        <h2>liên hệ</h2>
-                    </div>
-                </div>
-                <div class="col-md-8 mx-auto">
-                    <form>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="lastname">Họ</label>
-                                    <input id="lastname" type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="firstname">Tên</label>
-                                    <input id="firstname" type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input id="email" type="text" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label for="message">Lời nhắn</label>
-                                    <textarea id="message" class="form-control"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 text-center">
-                                <button type="submit" class="btn btn-template-outlined"><i class="fa fa-envelope-o"></i> Gửi</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </div>
-    <!-- <div id="map"></div> -->
-</div>

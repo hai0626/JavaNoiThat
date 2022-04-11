@@ -6,15 +6,12 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<link rel="stylesheet" href="resource/css/style.css"/>
+
 <!-- section outstanding product -->
-
-
-
 <section id="outstanding_products" class="outstanding_products">
     <div class="container">        
         <div class="outstanding_products-main">
-            
+<!--            
             <div class="product-large">
                 <div class="image">
                     <a href="./detailproduct.html">
@@ -27,7 +24,7 @@
                 </div>
                 <div class="name"><a href="#" alt="">bàn</a></div>
                 <div class="price"><h2> 1,000,000 ₫</h2></div>
-            </div>
+            </div>-->
 
             <div class="product-medium flex-column">
                 <div class="heading">

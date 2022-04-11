@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="<c:url value="/vendor/bootstrap-select/css/bootstrap-select.min.css"/>">
         <link rel="stylesheet" href="<c:url value="/vendor/owl.carousel/assets/owl.carousel.css"/>">
         <link rel="stylesheet" href="<c:url value="/vendor/owl.carousel/assets/owl.theme.default.css"/>">
-        <link rel="stylesheet" href="<c:url value="/css/style.css"/>">
+        <link rel="stylesheet" href="<c:url value="/css/app.css"/>">
         <script src="<c:url value="/vendor/jquery/jquery.min.js"/>"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
         <script type="text/html" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>

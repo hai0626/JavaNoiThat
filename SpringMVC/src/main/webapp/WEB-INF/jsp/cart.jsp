@@ -6,7 +6,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<link rel="stylesheet" href="resource/css/style.css"/>
 
 <%--<c:set var="total" value="0"></c:set>
 		<c:forEach var="item" items="${sessionScope.cart }">
@@ -115,10 +114,10 @@
           <td><button style="padding: 0.6rem 1rem; background-color: #34a3d4; border-radius: 5px; color: #fff">Xóa</button></td>
           <td>${item.product.price * item.quantity }đ</td>
         </tr>
+        
+        
          </c:forEach>
                
-         
-        
         
       </tbody>
     </table>

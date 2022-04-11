@@ -1346,3 +1346,136 @@ nav .pagination-item .page-link.active {
     font-size: 1.6rem;
 }
 
+.intro {
+  padding: 20rem 0 10rem;
+}
+.intro-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 3rem;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+.intro-grid-box h2 {
+  font-size: 2.2rem;
+  color: #252525;
+  font-weight: 400;
+  line-height: 2.2rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #111;
+  line-height: 6rem;
+}
+.intro-grid-box p {
+  font-size: 1.2rem;
+  color: #252525;
+  font-weight: 400;
+  line-height: 2.2rem;
+  text-transform: capitalize;
+  color: #343a40;
+}
+.intro-user {
+  background-color: #f3f2ee;
+  display: flex;
+  margin: 8rem 0;
+}
+.intro-user-info {
+  flex: 1 1 35rem;
+  margin: 0 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.intro-user-info img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.intro-user-info h3 {
+  font-size: 1.5rem;
+  color: #252525;
+  font-weight: 400;
+  line-height: 2.2rem;
+  text-transform: capitalize;
+  color: #343a40;
+  line-height: 2.4rem;
+  font-style: italic;
+}
+.intro-user-info .user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.intro-user-info .user span {
+  font-size: 2rem;
+  color: #252525;
+  font-weight: 400;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  color: #111;
+}
+.intro-user-info .user span img {
+  width: 8rem;
+  height: 8rem;
+  line-height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.intro-user-image {
+  flex: 1 1 60rem;
+}
+.intro-user-image img {
+  width: 100%;
+  height: 60rem;
+}
+.intro .about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intro .about-me .heading-text {
+  font-size: 1.4rem;
+  color: #252525;
+  font-weight: 400;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  color: #f7941d;
+  font-weight: 800;
+  padding: 0 1.5rem;
+  letter-spacing: 0.2rem;
+  border-bottom: 0.1rem solid #f7941d;
+}
+.intro .about-me .title-text {
+  font-size: 2.4rem;
+  color: #252525;
+  font-weight: 400;
+  line-height: 2.2rem;
+  text-transform: capitalize;
+  text-transform: capitalize;
+  line-height: 3rem;
+  margin: 2rem 0;
+  color: #111;
+}
+.intro .about-me p {
+  font-size: 1.2rem;
+  color: #252525;
+  font-weight: 400;
+  line-height: 2.2rem;
+  text-transform: capitalize;
+  font-weight: 300;
+  color: #343a40;
+  text-align: center;
+}
+

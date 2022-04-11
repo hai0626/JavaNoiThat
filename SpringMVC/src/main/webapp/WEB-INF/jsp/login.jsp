@@ -7,9 +7,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<div class="container">
+<!--<div class="container">
     <div class="row py-5 mt-4 align-items-center">
-        <!-- For Demo Purpose -->
+         For Demo Purpose 
         <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
             <img src="https://usersplit.com/landrick/images/user/login.svg" alt="" class="img-fluid mb-3 d-none d-md-block">
         </div>
@@ -34,21 +34,42 @@
                             </div>
                             <input type="password" class="form-control" id="fullname" placeholder="Mật khẩu" style="width: 100%" name="passWord" required>
                         </div>
-                        ${message}
-                        <div class="mb-2 text-center">
-                            <button type="submit" class="btn btn-template-outlined w-100"><b>Đăng nhập</b></button>
-                        </div>
-                    </form>
-                    <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-3">
-                        <div class="border-bottom w-100 ml-5"></div>
-                        <span class="px-2 small text-muted font-weight-bold text-muted">hoặc</span>
-                        <div class="border-bottom w-100 mr-5"></div>
-                    </div>
-                    <div class="text-center w-100">
-                        <p class="text-muted font-weight-bold">Bạn chưa có tài khoản? <a href="<c:url value="/register"/>" class="signup-btn">Đăng ký</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+${message}
+<div class="mb-2 text-center">
+    <button type="submit" class="btn btn-template-outlined w-100"><b>Đăng nhập</b></button>
 </div>
+</form>
+<div class="form-group col-lg-12 mx-auto d-flex align-items-center my-3">
+<div class="border-bottom w-100 ml-5"></div>
+<span class="px-2 small text-muted font-weight-bold text-muted">hoặc</span>
+<div class="border-bottom w-100 mr-5"></div>
+</div>
+<div class="text-center w-100">
+<p class="text-muted font-weight-bold">Bạn chưa có tài khoản? <a href="<c:url value="/register"/>" class="signup-btn">Đăng ký</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>-->
+<section id="login" class="login">
+    <div class="container">
+        <form class="box" action="<c:url value="/login" />" method="POST">
+            <h2>tài khoản</h2>
+            <p>nếu chưa có tài khoản vui lòng đăng ký trước khi đăng nhập</p>
+            <div class="box-email">
+                <h5>email</h5>
+                <input type="text" id="fullname" placeholder="Email" value="" name="userName" required />
+            </div>
+            <div class="box-pass">
+                <h5>mật khẩu</h5>
+                <input type="password" id="fullname" placeholder="Mật Khẩu" value="" name="passWord" required/>
+            </div>
+            ${message}
+            <button class="btn" type="submit"> đăng nhập </button>
+            <div class="notify">
+                <span> Chưa có tài khoản: <a href="<c:url value="/register"/>">đăng ký</a></span>
+            </div>
+        </form>
+    </div>
+</section>

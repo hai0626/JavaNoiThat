@@ -7,7 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<link rel="stylesheet" href="resource/css/style.css"/>
+
 
 <div class="background"></div>
 <!-- section header -->
@@ -28,42 +28,36 @@
             </form>
             <div class="auth">
 
-                <!-- <div class="dropdown">
-                  <div class="dropdown-select">
-                    <span class="select">Xin chào, Long</span>
-                    <i class="fa fa-caret-down icon"></i>
-                  </div>
-                  <div class="dropdown-list">
-                    <div class="dropdown-list__item">
-                      <a href="#">tài khoản</a>
-                    </div>
-                    <div class="dropdown-list__item">
-                      <a href="#">
-                        đăng xuất
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                <!--              
                 -->
 
                 <c:choose>
                     <c:when test="${sessionScope.userName == null}">
-                        
+
                         <div class="login">
-                            <a href="<c:url value="/login"/>">đăng nhập</a href="#">
+                            <a href="<c:url value="/login"/>">đăng nhập</a>
                         </div> 
                         <div class="register">
-                            <a href="<c:url value="/register"/>" >đăng ký</a href="#">
+                            <a href="<c:url value="/register"/>" >đăng ký</a>
                         </div>
                     </c:when>
                     <c:when test="${sessionScope.userName != null}">
-                        <div class="login">
-                            <a class="signup-btn">
-                                <span class="d-none d-md-inline-block">${sessionScope.userName}</span></a>
-                            <a href="<c:url value="/logout"/>" class="signup-btn">
-                                <i class="fa-solid fa-right-from-bracket"></i>
-                                <span class="d-none d-md-inline-block">Đăng xuất</span></a>
-                        </div>  
+                        <div class="dropdown">
+                            <div class="dropdown-select">
+                                <span class="select">Xin chào, ${sessionScope.userName}</span>
+                                <i class="fa fa-caret-down icon"></i>
+                            </div>
+                            <div class="dropdown-list">
+                                <div class="dropdown-list__item">
+                                    <a href="#">tài khoản</a>
+                                </div>
+                                <div class="dropdown-list__item">
+                                    <a href="<c:url value="/logout"/>">
+                                        đăng xuất
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </c:when>
                 </c:choose>
 
@@ -91,7 +85,7 @@
                     </a>
                 </li>
                 <li class="navbar-item">
-                    <a href="<c:url value="/"/>" class="links">
+                    <a href="<c:url value="/about"/>" class="links">
                         giới thiệu
                     </a>
                 </li>
@@ -106,7 +100,7 @@
                               </a>
                             </li>-->
                 <li class="navbar-item">
-                    <a href="#" class="links">
+                    <a href="<c:url value="/contact"/>" class="links">
                         liên hệ
                     </a>
                 </li>

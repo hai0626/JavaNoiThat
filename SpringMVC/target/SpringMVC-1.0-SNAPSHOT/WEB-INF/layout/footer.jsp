@@ -15,7 +15,7 @@
           <div class="policy-main">
             <div class="policy-main-item">
               <div class="item-icon">
-                <img src="<c:url value="/img/policy1.png"/>" alt="" />
+                <img src="<c:url value="/img/policy1.png"/>" alt="" />"
               </div>
               <div class="description">
                 <h3>giao hàng miễn phí</h3>

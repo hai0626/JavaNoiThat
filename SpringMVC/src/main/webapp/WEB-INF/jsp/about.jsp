@@ -1,12 +1,12 @@
 <%-- 
     Document   : about
     Created on : 14 Mar 2022, 1:08:31 pm
-    Author     : Hiệp Phan
+    Author     : Đức Long
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<div id="heading-breadcrumbs">
+<!--<div id="heading-breadcrumbs">
     <div class="container">
         <div class="row d-flex align-items-center flex-wrap">
             <div class="col-md-7">
@@ -20,8 +20,8 @@
             </div>
         </div>
     </div>
-</div>
-<div id="content">
+</div>-->
+<!--<div id="content">
     <div class="container">
         <section class="bar no-padding-bottom">
             <div class="row">
@@ -137,7 +137,7 @@
                     <h2>Khách hàng nói gì về chúng tôi</h2>
                 </div>
                 <p class="lead">Sự hài lòng của khách hàng luôn là tiêu chí mà chúng tôi luôn đặt lên hàng đầu. Chúng tôi luôn muốn đem lại trải nghiệm tuyệt vời nhất đến với khách hàng.</p>
-                <!-- Carousel Start-->
+                 Carousel Start
                 <ul class="owl-carousel testimonials list-unstyled equal-height">
                     <li class="item">
                         <div class="testimonial d-flex flex-wrap">
@@ -227,7 +227,7 @@
                         </div>
                     </li>
                 </ul>
-                <!-- Carousel End-->
+                 Carousel End
             </div>
         </div>
     </div>
@@ -264,4 +264,98 @@
 
         </div>
     </div>
+</section>-->
+<section class="intro" id="intro">
+  <div class="container">
+    <div class="intro-image">
+      <img
+        src="https://noithatluongson.vn/wp-content/uploads/2021/07/furniture1.jpg"
+        alt=""
+      />
+    </div>
+    <div class="intro-grid">
+      <div class="intro-grid-box">
+        <h2>Về chúng tôi?</h2>
+        <p>
+          Seafurniture là đứa con tinh thần mà Brodev tâm
+          huyết nhất . Sở dĩ việc đặt tên thương hiệu là
+          Seafurniture bởi vì đây vốn là một website được
+          Brodev đầu tư chất xám và rèn dũa mỗi ngày. Nó
+          được xây dựng vào dịp chuẩn bị con đường lớn nhất
+          để Brodev bước ra thế giới IT bên ngoài. Là cơ hội
+          để có thể cho các nhà tuyển dụng xem xét và đánh
+          giá năng lực. Vì vậy để làm tốt nhất có thể thì
+          đây chính là sản phẩm mà Brodev tâm huyết nhất
+          trong 4 năm tại trường đại học.
+        </p>
+      </div>
+      <div class="intro-grid-box">
+        <h2>Chúng tôi cần làm gì?</h2>
+        <p>
+          Để xây dựng Seafurniture đang thực hiện trên
+          development, chúng tôi đã phân tích và thiết kế cơ
+          sở dữ liệu. Sau đó tiến hành phát tiển UX, UI nhằm
+          giúp cho khách hàng trải nghiệm một cách tốt nhất.
+          Song song đó chúng tôi quản lý số lượng khách hàng
+          đăng ký tin dùng Seafurniture cũng như là thực
+          hiện thao tác các tính năng trên website. Chúng
+          tôi cũng cần sự góp ý, phẩn hồi chân thành từ phía
+          khách hàng để Seafurniture ngày một hoàn thiện
+          hơn.
+        </p>
+      </div>
+      <div class="intro-grid-box">
+        <h2>Tại sao nên chọn?</h2>
+        <p>
+          Một thương hiệu thành công được xây dựng bởi lòng
+          tin và sự hài lòng của khách hàng. Seafurniture
+          được ra đời bởi điều đó : sự chân thành , lòng tin
+          và hơn hết nữa chúng tôi dành rất nhiều thời gian
+          , tìm hiểu để mang đến những sản phẩm chất lượng
+          nhất đến người tiêu dùng.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="intro-user">
+    <div class="intro-user-info">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQitB_xLW-iTAIOLwgxfrkYRhhA3mlxKKC5A&amp;usqp=CAU"
+        alt=""
+      />
+      <h3>
+        “Một thương hiệu thành công được xây dựng bởi lòng
+        tin và sự hài lòng của khách hàng. Seafurniture được
+        ra đời bởi điều đó : sự chân thành , lòng tin và hơn
+        hết nữa chúng tôi dành rất nhiều thời gian , tìm
+        hiểu để mang đến những sản phẩm chất lượng nhất đến
+        người tiêu dùng.”
+      </h3>
+      <div class="user">
+        <span><img src="https://jysk.vn/Data/Sites/1/media/1-san-pham/7-ghe-ban-an/ban-an.jpg" alt="" /></span>
+        <span>Brodev</span>
+      </div>
+    </div>
+    <div class="intro-user-image">
+      <img src="https://zsofa.vn/wp-content/uploads/2020/11/dong-ghe-sofa-cao-cap.jpg" alt="" />
+    </div>
+  </div>
+  <div class="container">
+    <div class="about-me">
+      <h3 class="heading-text">seafurniture</h3>
+      <h3 class="title-text">về chúng tôi</h3>
+      <p>
+        Seafurniture là đứa con tinh thần mà Brodev tâm
+        huyết nhất . Sở dĩ việc đặt tên thương hiệu là
+        Seafurniture bởi vì đây vốn là một website được
+        Brodev đầu tư chất xám và rèn dũa mỗi ngày. Nó được
+        xây dựng vào dịp chuẩn bị con đường lớn nhất để
+        Brodev bước ra thế giới IT bên ngoài. Là cơ hội để
+        có thể cho các nhà tuyển dụng xem xét và đánh giá
+        năng lực. Vì vậy để làm tốt nhất có thể thì đây
+        chính là sản phẩm mà Brodev tâm huyết nhất trong 4
+        năm tại trường đại học.
+      </p>
+    </div>
+  </div>
 </section>

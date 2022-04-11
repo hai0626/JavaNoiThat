@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<div id="heading-breadcrumbs">
+<!--<div id="heading-breadcrumbs">
     <div class="container">
         <div class="row d-flex align-items-center flex-wrap">
             <div class="col-md-7">
@@ -23,7 +23,7 @@
 </div>
 <div class="container">
     <div class="row py-5 mt-4 align-items-center">
-        <!-- For Demo Purpose -->
+        For Demo Purpose 
         <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
             <img src="https://atpsoftware.vn/wp-content/uploads/2020/02/Nh%E1%BA%ADn-bi%E1%BA%BFt-Register-l%C3%A0-g%C3%AC.jpg" alt="" class="img-fluid mb-3 d-none d-md-block">
         </div>
@@ -91,7 +91,7 @@
                         <span class="px-2 small text-muted font-weight-bold text-muted">hoặc</span>
                         <div class="border-bottom w-100 mr-5"></div>
                     </div>
-                    <!-- Already Registered -->
+                    Already Registered 
                     <div class="text-center w-100">
                         <p class="text-muted font-weight-bold">Bạn đã đăng ký?<a href="<c:url value="/login"/>" class="text-primary ml-2">Đăng nhập</a></p>
                     </div>
@@ -99,4 +99,40 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
+<section id="register" class="register">
+    <div class="container">
+        <form class="box" action="<c:url value="/register" />" method="POST">
+            <h2>đăng ký tài khoản</h2>
+            <div class="box-user">
+                <h5>họ tên</h5>
+                <input type="text"  id="fullname"  placeholder="Họ tên" value="" name="fullName" />
+            </div>
+            <div class="box-email">
+                <h5>email</h5>
+                <input type="email" id="email"  placeholder="Email" value="" name="email" />
+            </div>
+            <div class="box-email">
+                <h5>tên đăng nhập</h5>
+                <input type="text" id="username" placeholder="Tên đăng nhập" value="" name="userName" />
+            </div>
+            <div class="box-pass">
+                <h5>mật khẩu</h5>
+                <input type="password" id="password" placeholder="Mật Khẩu" value="" name="passWord"/>
+            </div>
+            <div class="box-phone">
+                <h5>địa chỉ</h5>
+                <input type="text" id="address" placeholder="Địa chỉ" value="" name="address"/>
+            </div>
+            <div class="box-phone">
+                <h5>số điện thoại</h5>
+                <input type="tel" id="phone" placeholder="Số điện thoại" value="" id="phone"/>
+            </div>
+
+            <button class="btn" type="submit">đăng ký</button>
+            <div class="notify">
+                <span> Nếu đã có tài khoản trở về: <a href="<c:url value="/login"/>">đăng nhập</a></span>
+            </div>
+        </form>
+    </div>
+</section>

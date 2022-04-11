@@ -1,12 +1,12 @@
 <%-- 
     Document   : product
     Created on : Mar 10, 2022, 1:26:15 PM
-    Author     : huynh
+    Author     : Duc Long
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!--<link rel="stylesheet" href="/resource/css/style.css"/>-->
+
 
 
 <!--<div id="content">
