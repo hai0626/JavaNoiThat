@@ -18,7 +18,7 @@
                 <tr>
                     <th scope="col">id</th>
                     <th scope="col">Tên Sản Phẩm</th>
-                    <th scope="col">Loại Sản Phẩm</th>
+<!--                    <th scope="col">Loại Sản Phẩm</th>-->
                     <th scope="col">Giá</th>
                     <th scope="col">Mô Tả</th>
                     <th scope="col">Trạng Thái</th>
@@ -27,7 +27,7 @@
                 </tr>
             </thead>
             <tbody>
-                <c:forEach  var = "item" items="${listProduct}">
+                <c:forEach  var = "item" items="${listProduct}" >
                     <tr>
                         <th scope="row">${item.idProduct}</th>
                         <td> ${item.nameProduct}</td>
@@ -36,7 +36,8 @@
                         <td>${item.description}</td>
                         <td>${item.status}</td>
                         <td><img src="<c:url value="${item.linkImg}"/>" style="width: 50px " alt=""  /></td>
-                        <td><a href="">Sửa</a> <a href="">Xóa</a></td>
+                        <td><a href="<c:url value="/admin/edit_product"/>">Sửa</a> 
+                            <a href="">Xóa</a></td>
                     </tr>
                 </c:forEach>
             </tbody>

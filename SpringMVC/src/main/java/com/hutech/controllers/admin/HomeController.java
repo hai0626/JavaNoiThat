@@ -11,10 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-/**
- *
- * @author Hiệp Phan
- */
+
 @Controller("AdminHomeController")
 @RequestMapping("/admin")
 public class HomeController {
@@ -30,12 +27,19 @@ public class HomeController {
     @RequestMapping(value = {"/product"})
     public String product(Model model) throws SQLException {
         model.addAttribute("listProduct", productDAO.getList());
-        model.addAttribute("listBrand", brandDAO.getList());
+        //model.addAttribute("listBrand", brandDAO.getList());
         return "admin/product";
     }
     
-    @RequestMapping(value = {"/addProduct"})
-    public String addProduct(Model model) {
-        return "admin/addProduct";
+    @RequestMapping(value = {"/add_product"})
+    public String addProduct(Model model) throws SQLException {
+        model.addAttribute("listBrand", brandDAO.getList());
+        return "admin/add_product";
+    }
+    
+      @RequestMapping(value = {"/edit_product"})
+    public String editProduct(Model model) throws SQLException {
+       
+        return "admin/edit_product";
     }
 }
