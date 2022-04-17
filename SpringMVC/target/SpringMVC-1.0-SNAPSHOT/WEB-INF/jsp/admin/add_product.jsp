@@ -53,13 +53,16 @@
 
                     <div class="form-group">
                         <label for="tech" class="col-sm-3 control-label">Loại Hàng</label>
-                        <div class="col-sm-3">
-                            <select class="form-control">
-                                 <c:forEach  var = "item" items="${listBrand}">
-                                <option value="${item.nameBrand}"></option>
-                                 </c:forEach>
-                            </select>
-                        </div>
+                        <c:forEach  var = "item" items="${listBrand}">
+                            <div class="col-sm-3">
+
+                                <select class="form-control">
+
+                                    <option value="${item.nameBrand}"></option>
+
+                                </select>
+                            </div>
+                        </c:forEach>
                     </div> 
                     <hr>
                     <div class="form-group">

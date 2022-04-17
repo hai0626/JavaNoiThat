@@ -1,8 +1,4 @@
-<%-- 
-    Document   : product
-    Created on : 7 Apr 2022, 12:55:22 pm
-    Author     : Pham Thanh Long
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -18,7 +14,7 @@
                 <tr>
                     <th scope="col">id</th>
                     <th scope="col">Tên Sản Phẩm</th>
-<!--                    <th scope="col">Loại Sản Phẩm</th>-->
+                    <th scope="col">Loại Sản Phẩm</th>
                     <th scope="col">Giá</th>
                     <th scope="col">Mô Tả</th>
                     <th scope="col">Trạng Thái</th>

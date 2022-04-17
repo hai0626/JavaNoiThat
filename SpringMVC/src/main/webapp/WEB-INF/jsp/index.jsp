@@ -11,26 +11,7 @@
 <section id="outstanding_products" class="outstanding_products">
     <div class="container">        
         <div class="outstanding_products-main">
-<!--            
-            <div class="product-large">
-                <div class="image">
-                    <a href="./detailproduct.html">
-                        <img src="<c:url value="${product.linkImg}"/>" class="img" alt="img" />
-                        <div class="info">
-                            <a href="#" alt="img" class="iconProduct"><i class="fa-solid fa-eye"></i></a>
-                            <a href="#" class="iconProduct" ><i class="fas fa-dolly"></i></a>
-                        </div>
-                    </a>
-                </div>
-                <div class="name"><a href="#" alt="">bàn</a></div>
-                <div class="price"><h2> 1,000,000 ₫</h2></div>
-            </div>-->
 
-            <div class="product-medium flex-column">
-                <div class="heading">
-                    <h2 class="skew">nổi bật nhất</h2>
-                </div>
-                <div class="content">
                    
                     <c:forEach  var = "item" items="${listProduct}">
                     <div class="item">
@@ -52,16 +33,7 @@
                     </div> 
                     </c:forEach>
                 </div>
-                <!--            <nav>
-                              <ul class="pagination">
-                                  <li class= "pagination-item active">
-                                    <a href="#" class="page-link active">1</a>
-                                    <a href="#" class="page-link">2</a>
-                                    <a href="#" class="page-link">3</a>
-                                    <a href="#" class="page-link">4</a>
-                                  </li>
-                              </ul>
-                            </nav>-->
+              
             </div>
         </div>
     </div>
