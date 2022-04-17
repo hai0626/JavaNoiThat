@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Thêm Loai San Phâm</title>
+        <title>Thêm Loai Sản Phâm</title>
     </head>
     <body>
         <table class="table table-bordered table-dark">

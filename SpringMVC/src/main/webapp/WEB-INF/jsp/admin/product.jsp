@@ -32,7 +32,7 @@
                         <td>${item.description}</td>
                         <td>${item.status}</td>
                         <td><img src="<c:url value="${item.linkImg}"/>" style="width: 50px " alt=""  /></td>
-                        <td><a href="<c:url value="/admin/edit_product"/>">Sửa</a> 
+                        <td><a href="<c:url value="/admin/edit_product/${item.idProduct}"/>">Sửa</a> 
                             <a href="">Xóa</a></td>
                     </tr>
                 </c:forEach>
