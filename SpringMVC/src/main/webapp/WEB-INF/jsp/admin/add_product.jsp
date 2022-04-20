@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,12 +13,8 @@
         <title>Thêm Sản Phẩm</title>
     </head>
     <body>
+        
         <div class="container">
-
-
-            <div class="panel-heading"> 
-                <h3 class="panel-title">Thêm Sản Phẩm</h3> 
-            </div> 
             <div class="panel-body">
 
                 <form action="add_product" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
@@ -56,11 +53,10 @@
 
                         <div class="col-sm-3">
 
-                            <select class="custom-select" name="idBrand">
-                                <c:forEach  var = "item" items="${listBrand}">
-                                    <option value="${item.idBrand}">${item.nameBrand}</option>
-
-                                </c:forEach>
+                            <select class="custom-select" name="IdBrand">
+                                <c:forEach var="hang" items="${listBrand}">
+                                            <option value="${hang.idBrand}">${hang.nameBrand}</option>
+                                        </c:forEach>
                             </select>
                         </div>
 

@@ -2,6 +2,7 @@ com\hutech\model\Order.class
 com\hutech\model\ImgProduct.class
 com\hutech\model\Product.class
 com\hutech\dao\UserRoleDAO.class
+com\hutech\model\Post.class
 com\hutech\controllers\ProductController.class
 com\hutech\model\UserRole.class
 com\hutech\controllers\admin\HomeController.class
@@ -11,6 +12,7 @@ com\hutech\dao\BrandDAO.class
 com\hutech\model\Contact.class
 com\hutech\controllers\admin\UserRoleController.class
 com\hutech\model\User.class
+com\hutech\controllers\admin\PostController.class
 com\hutech\model\Brand.class
 com\hutech\controllers\admin\LoginAdminController.class
 com\hutech\controllers\CartController.class
@@ -21,5 +23,7 @@ com\hutech\helper\JDBCConnection.class
 com\hutech\configs\WebApplicationContextConfig.class
 com\hutech\model\Cart.class
 com\hutech\model\OrderDetail.class
+com\hutech\controllers\admin\BrandController.class
 com\hutech\model\OrderDetailPK.class
 com\hutech\dao\ProductDAO.class
+com\hutech\controllers\admin\ProductController.class

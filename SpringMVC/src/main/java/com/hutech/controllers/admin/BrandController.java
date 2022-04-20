@@ -43,6 +43,7 @@ public class BrandController {
     public String addBrand(Model model, HttpServletRequest request, MultipartFile image) throws SQLException, IOException {
         if (image.isEmpty()) {
             model.addAttribute("message", "Vui lòng chon file !");
+            return "admin/add_brand";
         } else {
             try{
                 String ten = request.getParameter("NameBrand");
@@ -50,8 +51,7 @@ public class BrandController {
                 image.transferTo(new File( "D:\\JavaNoiThat\\SpringMVC\\src\\main\\webapp",hinh));
                 Brand s = new Brand(null,ten, hinh,null);
                 brandDAO.insert(s);
-
-                model.addAttribute("listBrand", brandDAO.getList());
+                return "redirect:/admin/brand";
             } catch (Exception e) {
                 model.addAttribute("message", "Lỗi !");
             }
@@ -68,7 +68,6 @@ public class BrandController {
     @RequestMapping(value = "delete_brand/{idBrand}")
     public String deleteBrand(Model model, @PathVariable("idBrand") int idBrand) throws SQLException {
         brandDAO.delete(idBrand);
-        model.addAttribute("listBrand", brandDAO.getList());
         return "admin/brand";
     }
 }

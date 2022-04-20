@@ -20,17 +20,17 @@
                 <h3 class="panel-title">Thêm Sản Phẩm</h3> 
             </div> 
             <div class="panel-body">
-
+                ${message}
                 <form action="<c:url value="/admin/add_brand"/>" method="POST" class="form-horizontal" role="form" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="name" class="col-sm-3 control-label">Tên Loai San Pham</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" name="nameProduct" id="name" placeholder="Vui lòng nhập tên loai sản phẩm">
+                            <input type="text" class="form-control" name="NameBrand" id="NameBrand" placeholder="Vui lòng nhập tên loai sản phẩm">
                         </div>
                     </div> <!-- form-group // -->
                     <div class="col-sm-3">
                         <label class="control-label small" for="file_img">Hình Ảnh:</label> 
-                        <input type="file" name="file_img">
+                        <input type="file" id="file" name="image" accept="image/png, image/jpeg">
                     </div>
                     <hr>
                     <div class="form-group">

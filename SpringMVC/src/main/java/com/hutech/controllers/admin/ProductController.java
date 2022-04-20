@@ -50,6 +50,7 @@ public class ProductController {
 
     @RequestMapping(value = {"/add_product"}, method = RequestMethod.POST)
     public String create(Model model, HttpServletRequest request, MultipartFile image) throws SQLException, IOException {
+        model.addAttribute("listBrand", brandDAO.getList());
         if (image.isEmpty()) {
             model.addAttribute("message", "Vui lòng chon file !");
         } else {
