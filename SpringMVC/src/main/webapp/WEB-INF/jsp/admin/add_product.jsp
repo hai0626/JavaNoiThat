@@ -21,25 +21,25 @@
                     <div class="form-group">
                         <label for="name" class="col-sm-3 control-label">Tên Sản Phẩm</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" name="nameProduct" id="name" placeholder="Vui lòng nhập tên sản phẩm">
+                            <input type="text" class="form-control" name="NameProduct" id="name" placeholder="Vui lòng nhập tên sản phẩm">
                         </div>
                     </div> <!-- form-group // -->
                     <div class="form-group">
                         <label for="name" class="col-sm-3 control-label">Trạng Thái</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" name="status" id="status" placeholder="Trạng thái">
+                            <input type="text" class="form-control" name="Status" id="status" placeholder="Trạng thái">
                         </div>
                     </div> 
                     <div class="form-group">
                         <label for="name" class="col-sm-3 control-label">Mô tả</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" name="description" id="description" placeholder="Mô tả">
+                            <input type="text" class="form-control" name="Description" id="description" placeholder="Mô tả">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="qty" class="col-sm-3 control-label">Giá</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" name="price" id="price" placeholder="Giá">
+                            <input type="text" class="form-control" name="Price" id="price" placeholder="Giá">
                         </div>
                     </div> 
 

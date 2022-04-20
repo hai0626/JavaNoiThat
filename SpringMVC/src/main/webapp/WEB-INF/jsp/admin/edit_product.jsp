@@ -25,26 +25,26 @@
 
                         <label for="name" class="col-sm-3 control-label">Tên Sản Phẩm</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" name="nameProduct" id="name" 
+                            <input type="text" class="form-control" name="NameProduct" id="name" 
                                    value="${productDetail.nameProduct}"  >
                         </div>
                     </div> <!-- form-group // -->
                     <div class="form-group">
                         <label for="name" class="col-sm-3 control-label">Trạng Thái</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" name="status" id="status" value="${productDetail.status}">
+                            <input type="text" class="form-control" name="Status" id="status" value="${productDetail.status}">
                         </div>
                     </div> 
                     <div class="form-group">
                         <label for="name" class="col-sm-3 control-label">Mô tả</label>
                         <div class="col-sm-9">
-                            <textarea class="form-control" name="description" id="description" value="${productDetail.description}"></textarea>
+                            <textarea class="form-control" name="Description" id="description" value="${productDetail.description}"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="qty" class="col-sm-3 control-label">Giá</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" name="price" id="price" value="${productDetail.price}">
+                            <input type="text" class="form-control" name="Price" id="price" value="${productDetail.price}">
                         </div>
                     </div> 
 
@@ -56,7 +56,7 @@
                     <div class="form-group">
                         <label for="tech" class="col-sm-3 control-label">Loại Hàng</label>
                         <div class="col-sm-3">
-                            <select class="form-control">
+                            <select class="custom-select" name="IdBrand">
                                 <c:forEach  var = "item" items="${listBrand}">
                                     <option value="${item.nameBrand}"></option>
                                 </c:forEach>
