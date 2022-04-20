@@ -9,7 +9,10 @@ import com.hutech.dao.ProductDAO;
 import com.hutech.model.Brand;
 
 import com.hutech.model.Product;
+import java.io.File;
+import java.io.IOException;
 import java.sql.SQLException;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,6 +20,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  *
@@ -36,36 +40,63 @@ public class ProductController {
         return "admin/product";
     }
 
-    @RequestMapping(value = {"/add_product"})
+    @RequestMapping(value = {"/add_product"},method = RequestMethod.GET)
     public String addProduct(Model model) throws SQLException {
         model.addAttribute("listBrand", brandDAO.getList());
+        
         return "admin/add_product";
     }
 
+
+    @RequestMapping(value = {"/add_product"}, method = RequestMethod.POST)
+    public String create(Model model, HttpServletRequest request, MultipartFile image) throws SQLException, IOException {
+        if (image.isEmpty()) {
+            model.addAttribute("message", "Vui lòng chon file !");
+        } else {
+            try {
+                String ten = request.getParameter("NameProduct");
+                Integer gia = Integer.parseInt(request.getParameter("Price"));
+                String trangthai = request.getParameter("Status");
+                String hinh = "/resource/img/" + image.getOriginalFilename();
+                image.transferTo(new File("D:\\JavaNoiThat\\SpringMVC\\src\\main\\webapp", hinh));
+                String mota = request.getParameter("Description");
+                Integer loaisp = Integer.parseInt(request.getParameter("IdBrand"));
+                Brand br = new Brand(loaisp);
+                Product s = new Product(null,ten, gia, mota, trangthai,br, hinh,null);
+                productDAO.insert(s);
+
+                model.addAttribute("listProduct", productDAO.getList());
+            } catch (Exception e) {
+                model.addAttribute("message", "Lỗi !");
+            }
+        }
+
+        return "admin/product";
+    }
     
-
-    @RequestMapping(value = {"/add_product"}, method = RequestMethod.GET)
-    public String addPriduct(ModelMap mm, HttpSession session) throws SQLException {
-        mm.addAttribute("listBrand", brandDAO.getList());
-        mm.put("product", new Product());
-        mm.put("listbrand", brandDAO.getList());
-        return "admin/add_product";
-    }
-
     @RequestMapping(value = {"/edit_product/{idproduct}"})
     public String editProduct(Model model, @PathVariable("idproduct") String idproduct) throws SQLException {
-         Product product = new ProductDAO().getByID(idproduct);
-          model.addAttribute("productDetail", product);
-           model.addAttribute("listBrand", brandDAO.getList());
-           System.out.println(brandDAO.getList());
+        Product product = new ProductDAO().getByID(idproduct);
+        model.addAttribute("productDetail", product);
+        model.addAttribute("listBrand", brandDAO.getList());
+        System.out.println(brandDAO.getList());
         return "admin/edit_product";
     }
-//    @RequestMapping(value = "edit_product/{productId}", method = RequestMethod.GET)
-//    public String viewProductEdit(ModelMap mm, HttpSession session, @PathVariable("productId") int productId) throws SQLException {
-//        Product p = productDAO.getByID( String.valueOf(productId));
-//        mm.put("product", p);
-//        mm.put("brand", brandDAO.getByID(String.valueOf(productId)));
-//        return "admin/edit_product";
-//    }
 
+    @RequestMapping(value = "edit_product/{productId}", method = RequestMethod.POST)
+    public String viewProductEdit(ModelMap mm, HttpSession session, @PathVariable("productId") String productId) throws SQLException {
+        Product p = productDAO.getByID(String.valueOf(productId));
+        mm.put("product", p);
+        mm.put("brand", brandDAO.getByID(String.valueOf(productId)));
+        return "admin/edit_product";
+    }
+
+    @RequestMapping(value = "delete/{idProduct}", method = RequestMethod.GET)
+    public String delete(Model model,@PathVariable("idProduct") int idProduct) throws SQLException {
+        productDAO.delete(idProduct);
+        model.addAttribute("listProduct", productDAO.getList());
+        return "admin/product";
+    }
+    
+   
 }

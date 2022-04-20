@@ -58,6 +58,7 @@
                         <li><a href="<c:url value="/admin/product"/>"><i class="fa-solid fa-chair"></i>Sản phẩm</a></li>
                         <li><a href="<c:url value="/admin/brand"/>")"><i class="fa-solid fa-chair"></i>Loại sản phẩm</a></li>
                         <li><a href="<c:url value="/admin/add_product"/>")"><i class="fa-solid fa-user-check"></i>Thêm sản phẩm</a></li>
+                        <li><a href="<c:url value="/admin/add_brand"/>")"><i class="fa-solid fa-user-check"></i>Thêm loai sản phẩm</a></li>
                         <li><a href="<c:url value="/admin/order"/>"><i class="fa-solid fa-clipboard-check"></i>Đơn hàng</a></li> 
                         <li><a href="<c:url value="/admin/userrole"/>")"><i class="fa-solid fa-user-check"></i>Vai trò</a></li>
                         <li><a href="<c:url value="/admin/post"/>"><i class="fa-solid fa-signs-post"></i>Bài viết</a></li>   

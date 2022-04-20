@@ -1,0 +1,45 @@
+<%-- 
+    Document   : add_brand
+    Created on : Apr 20, 2022, 4:24:16 PM
+    Author     : Admin
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Thêm loai Sản Phẩm</title>
+    </head>
+    <body>
+        <div class="container">
+
+
+            <div class="panel-heading"> 
+                <h3 class="panel-title">Thêm Sản Phẩm</h3> 
+            </div> 
+            <div class="panel-body">
+
+                <form action="add_product" method="post" class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Tên Sản Phẩm</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="nameProduct" id="name" placeholder="Vui lòng nhập tên sản phẩm">
+                        </div>
+                    </div> <!-- form-group // -->
+                    <div class="col-sm-3">
+                        <label class="control-label small" for="file_img">Hình Ảnh:</label> 
+                        <input type="file" name="file_img">
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <button type="submit" class="btn btn-primary">Thêm loai sản phẩm</button>
+                        </div>
+                    </div> 
+                </form>
+            </div> 
+        </div>
+
+    </body>
+</html>

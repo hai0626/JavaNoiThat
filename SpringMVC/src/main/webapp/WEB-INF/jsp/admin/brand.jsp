@@ -27,9 +27,9 @@
                     <tr>
                         <th scope="row">${item.idBrand}</th>
                         <td> ${item.nameBrand}</td>
-                        <td><img src="<c:url value="${item.imgBrand}"/>" style="width: 50px " alt=""  /></td>
+                        <td><img src="<c:url value="${item.imgBrand}"/>" style="width: 50px " alt="${item.imgBrand}"/></td>
                         <td><a href="<c:url value="/admin/edit_brand"/>">Sửa</a> 
-                            <a href="">Xóa</a></td>
+                            <a href="<c:url value="/admin/delete_brand/${item.idBrand}"/>">Xóa</a></td>
                     </tr>
                 </c:forEach>
             </tbody>

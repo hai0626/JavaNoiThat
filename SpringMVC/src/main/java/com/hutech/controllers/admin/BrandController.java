@@ -8,7 +8,9 @@ import com.hutech.dao.BrandDAO;
 import java.sql.SQLException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  *
@@ -38,4 +40,10 @@ public class BrandController {
         return "admin/edit_brand";
     }
 
+    @RequestMapping(value = "delete_brand/{idBrand}", method = RequestMethod.GET)
+    public String deleteBrand(Model model,@PathVariable("idBrand") int idBrand) throws SQLException {
+        brandDAO.delete(idBrand);
+        model.addAttribute("listBrand", brandDAO.getList());
+        return "admin/brand";
+    }
 }

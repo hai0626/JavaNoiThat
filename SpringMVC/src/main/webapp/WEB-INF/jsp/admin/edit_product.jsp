@@ -38,7 +38,7 @@
                     <div class="form-group">
                         <label for="name" class="col-sm-3 control-label">Mô tả</label>
                         <div class="col-sm-9">
-                            <textarea class="form-control" name="description" id="description" value="${productDetail.description}"></<textarea>
+                            <textarea class="form-control" name="description" id="description" value="${productDetail.description}"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
