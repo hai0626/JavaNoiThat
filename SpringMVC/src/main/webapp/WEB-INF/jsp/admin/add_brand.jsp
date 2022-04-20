@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,11 +21,11 @@
             </div> 
             <div class="panel-body">
 
-                <form action="add_product" method="post" class="form-horizontal" role="form">
+                <form action="<c:url value="/admin/add_brand"/>" method="POST" class="form-horizontal" role="form" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="name" class="col-sm-3 control-label">Tên Sản Phẩm</label>
+                        <label for="name" class="col-sm-3 control-label">Tên Loai San Pham</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" name="nameProduct" id="name" placeholder="Vui lòng nhập tên sản phẩm">
+                            <input type="text" class="form-control" name="nameProduct" id="name" placeholder="Vui lòng nhập tên loai sản phẩm">
                         </div>
                     </div> <!-- form-group // -->
                     <div class="col-sm-3">

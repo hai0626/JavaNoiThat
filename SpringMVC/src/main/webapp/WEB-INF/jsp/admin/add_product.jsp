@@ -20,7 +20,7 @@
             </div> 
             <div class="panel-body">
 
-                <form action="add_product" method="post" class="form-horizontal" role="form">
+                <form action="add_product" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="name" class="col-sm-3 control-label">Tên Sản Phẩm</label>
                         <div class="col-sm-9">
@@ -48,22 +48,22 @@
 
                     <div class="col-sm-3">
                         <label class="control-label small" for="file_img">Hình Ảnh:</label> 
-                        <input type="file" name="file_img">
+                        <input type="file" id="file" name="image" accept="image/png, image/jpeg">
                     </div>
 
                     <div class="form-group">
                         <label for="tech" class="col-sm-3 control-label">Loại Hàng</label>
 
-                            <div class="col-sm-3">
+                        <div class="col-sm-3">
 
-                                <select class="custom-select" name="idBrand">
-                        <c:forEach  var = "item" items="${listBrand}">
+                            <select class="custom-select" name="idBrand">
+                                <c:forEach  var = "item" items="${listBrand}">
                                     <option value="${item.idBrand}">${item.nameBrand}</option>
 
-                        </c:forEach>
-                                </select>
-                            </div>
-                        
+                                </c:forEach>
+                            </select>
+                        </div>
+
                     </div> 
                     <hr>
                     <div class="form-group">
