@@ -111,7 +111,7 @@
           <td>
               <input style="width: 20%; text-align: center;" type="number" id="quantity" name="quantity" value="${item.quantity}" min="1">
           </td>
-          <td><button style="padding: 0.6rem 1rem; background-color: #34a3d4; border-radius: 5px; color: #fff">Xóa</button></td>
+          <td><a href="${pageContext.request.contextPath }/cart/remove/${item.product.idProduct}"><button style="padding: 0.6rem 1rem; background-color: #34a3d4; border-radius: 5px; color: #fff" >Xóa</button></a></td>
           <td>${item.product.price * item.quantity }đ</td>
         </tr>
         

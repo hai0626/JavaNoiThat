@@ -63,7 +63,7 @@ public class ProductDAO {
         return list;
     }
 
-    public Product getByID(String id) throws SQLException {
+    public Product getByID(int id) throws SQLException {
         String sql = "SELECT * FROM `product` WHERE IdProduct = " + id + "";
         ResultSet rs = con.LoadData(sql);
         Product p = new Product();
@@ -100,8 +100,9 @@ public class ProductDAO {
     }
 
     public void insert(Product p) {
-        String sql = "INSERT INTO `product`(`IdBrand`, `NameProduct`, `Price`,`Description`,`Status`) "
-                + "VALUES ('" + p.getIdBrand().getIdBrand() + "','" + p.getNameProduct() + "','" + p.getPrice() + "','" + p.getDescription() + "','" + p.getStatus() + "')";
+        
+        String sql = "INSERT INTO `product`(`NameProduct`, `Price`,`Description`,`Status`,`LinkImg`,`IdBrand`) "
+                + "VALUES ('" + p.getNameProduct() + "','" + p.getPrice() + "','" + p.getDescription() + "','" + p.getStatus() + "','" + p.getLinkImg() + "','" + p.getIdBrand().getIdBrand() + "')";
         con.UpdateData(sql);
         System.out.println(sql);
     }
@@ -118,6 +119,15 @@ public class ProductDAO {
                 + " WHERE IdProduct = " + p.getIdProduct() + "";
         System.out.println(sql);
         con.UpdateData(sql);
+    }
+    
+     public List<Product> getListByPage(List<Product> arr, int start, int end){
+        List<Product> list = new ArrayList<>();
+        for (int i = start; i < end; i++)
+        {
+            list.add(arr.get(i));
+        }
+        return list;
     }
     
 }

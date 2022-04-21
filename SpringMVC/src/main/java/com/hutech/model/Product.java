@@ -81,19 +81,15 @@ public class Product implements Serializable {
         this.idProduct = idProduct;
     }
 
-    public Product(Integer idProduct, String nameProduct, int price, String description, 
-            String status,Brand idBrand,
-            String linkImg, Collection<OrderDetail> orderDetailCollection) {
+    public Product(Integer idProduct, String nameProduct, int price, String description,
+            String status, String linkImg, Brand idBrand) {
         this.idProduct = idProduct;
         this.nameProduct = nameProduct;
         this.price = price;
         this.description = description;
         this.status = status;
-        this.idBrand = idBrand;
         this.linkImg = linkImg;
-
-//        this.imgProductCollection = imgProductCollection;
-        this.orderDetailCollection = orderDetailCollection;
+        this.idBrand = idBrand;
     }
 
     public Integer getIdProduct() {

@@ -15,9 +15,10 @@
     <body>
         
         <div class="container">
+            ${message}
             <div class="panel-body">
 
-                <form action="add_product" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
+                <form action="<c:url value="/admin/add_product"/>" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="name" class="col-sm-3 control-label">Tên Sản Phẩm</label>
                         <div class="col-sm-9">
@@ -39,7 +40,7 @@
                     <div class="form-group">
                         <label for="qty" class="col-sm-3 control-label">Giá</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" name="Price" id="price" placeholder="Giá">
+                            <input type="text" class="form-control" name="Price" id="Price" placeholder="Giá">
                         </div>
                     </div> 
 

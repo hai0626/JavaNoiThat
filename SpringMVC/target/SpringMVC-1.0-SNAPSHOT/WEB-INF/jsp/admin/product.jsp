@@ -10,7 +10,7 @@
         <title>Thêm Sản Phẩm</title>
     </head>
     <body>
-        <table class="table table-bordered table-dark">
+        <table id="table">
             <thead>
                 <tr>
                     <th scope="col">id</th>
@@ -26,7 +26,7 @@
             <tbody>
                 <c:forEach  var = "item" items="${listProduct}" >
                     <tr>
-                        <td >${item.idProduct}</td>
+                        <td>${item.idProduct}</td>
                         <td> ${item.nameProduct}</td>
                         <td> ${item.idBrand.nameBrand}</td>
                         <td>${item.price}</td>

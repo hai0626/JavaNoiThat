@@ -57,7 +57,7 @@ public class BrandController {
             }
         }
 
-        return "admin/brand";
+        return "redirect:/admin/brand";
     }
 
     @RequestMapping(value = {"/edit_brand"})
@@ -68,6 +68,6 @@ public class BrandController {
     @RequestMapping(value = "delete_brand/{idBrand}")
     public String deleteBrand(Model model, @PathVariable("idBrand") int idBrand) throws SQLException {
         brandDAO.delete(idBrand);
-        return "admin/brand";
+        return "redirect:/admin/brand";
     }
 }

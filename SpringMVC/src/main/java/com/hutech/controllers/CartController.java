@@ -25,20 +25,40 @@ public class CartController {
 	}
 
 	@RequestMapping(value = "buy/{id}", method = RequestMethod.GET)
-	public String buy(@PathVariable("id") String id, HttpSession session) throws SQLException{
+	public String buy(@PathVariable("id") int id, HttpSession session) throws SQLException{
 		ProductDAO product = new ProductDAO();
-		if (session.getAttribute("cart") == null) {
+//		if (session.getAttribute("cart") == null) {
+//			List<Cart> cart = new ArrayList<Cart>();
+//			cart.add(new Cart(product.getByID(id), 1));
+//			session.setAttribute("cart", cart);
+//		} else {
+//			List<Cart> cart = (List<Cart>) session.getAttribute("cart");
+//			int index = this.exists(id, cart);
+//			if (index == -1) {
+//				cart.add(new Cart(product.getByID(id), 1));
+//			} else {
+//				int quantity = cart.get(index).getQuantity() + 1;
+//				cart.get(index).setQuantity(quantity);
+//			}
+//			session.setAttribute("cart", cart);
+//		}
+//		return "redirect:/cart";
+                
+                if (session.getAttribute("cart") == null) {
 			List<Cart> cart = new ArrayList<Cart>();
 			cart.add(new Cart(product.getByID(id), 1));
 			session.setAttribute("cart", cart);
 		} else {
 			List<Cart> cart = (List<Cart>) session.getAttribute("cart");
 			int index = this.exists(id, cart);
+                        System.out.print(index);
 			if (index == -1) {
 				cart.add(new Cart(product.getByID(id), 1));
+                                System.out.print(product.getByID(id));
 			} else {
-				int quantity = cart.get(index).getQuantity()+ 1;
+				int quantity = cart.get(index).getQuantity() + 1;
 				cart.get(index).setQuantity(quantity);
+                                
 			}
 			session.setAttribute("cart", cart);
 		}
@@ -46,7 +66,7 @@ public class CartController {
 	}
 
 	@RequestMapping(value = "remove/{id}", method = RequestMethod.GET)
-	public String remove(@PathVariable("id") String id, HttpSession session) {
+	public String remove(@PathVariable("id") int id, HttpSession session) {
 		ProductDAO product = new ProductDAO();
 		List<Cart> cart = (List<Cart>) session.getAttribute("cart");
 		int index = this.exists(id, cart);
@@ -55,9 +75,10 @@ public class CartController {
 		return "redirect:/cart";
 	}
 
-	private int exists(String id, List<Cart> cart) {
-		for (int i = 0; i < cart.size(); i++) {
-			if (cart.get(i).getProduct().getIdProduct().equals(id)) {
+	private int exists(int id, List<Cart> cart) {
+		for (int i = 0; i < cart.size(); i++) {                    
+			if (cart.get(i).getProduct().getIdProduct() == id) {
+                           
 				return i;
 			}
 		}

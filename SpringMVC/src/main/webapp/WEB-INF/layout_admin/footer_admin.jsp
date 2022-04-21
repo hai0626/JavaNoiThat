@@ -10,3 +10,8 @@
         </div>
     </div>
 </footer>
+
+<script>
+    $(document).ready( function () {
+    $('#table').DataTable();
+} );</script>
